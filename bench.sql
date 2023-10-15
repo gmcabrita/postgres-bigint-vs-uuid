@@ -86,3 +86,9 @@ begin
     );
   end loop;
 end$$;
+
+\! echo "uuid v4 insertion"
+insert into uuid_v4 (id) select gen_random_uuid() from generate_series(1, 10_000_000);
+
+\! echo "uuid v7 insertion"
+insert into uuid_v4_then_v7 (id) select uuid_generate_v7() from generate_series(1, 10_000_000);

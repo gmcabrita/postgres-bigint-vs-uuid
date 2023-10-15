@@ -34,6 +34,9 @@ insert into bigint (id) select * from generate_series(1, 100_000_000);
 insert into uuid_v4 (id) select gen_random_uuid() from generate_series(1, 100_000_000);
 insert into uuid_v7 (id) select uuid_generate_v7() from generate_series(1, 100_000_000);
 
+create table if not exists uuid_v4_then_v7 as table uuid_v4;
+
 vacuum analyze bigint;
 vacuum analyze uuid_v4;
+vacuum analyze uuid_v4_then_v7;
 vacuum analyze uuid_v7;

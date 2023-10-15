@@ -30,6 +30,12 @@ Time: 40797,448 ms (00:40,797)
 uuid v7 keyset:
 DO
 Time: 25438,581 ms (00:25,439)
+uuid v4 insertion:
+INSERT 0 10000000
+Time: 231315,171 ms (03:51,315)
+uuid v7 insertion:
+INSERT 0 10000000
+Time: 37850,565 ms (00:37,851)
 ```
 
 ### In Ruby (using Sequel)
